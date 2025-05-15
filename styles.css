@@ -1,0 +1,364 @@
+/* Base Styles */
+:root {
+    --primary-color: #0087FF;
+    --primary-dark: #003D7A;
+    --secondary-color: #34C759;
+    --accent-color: #9C27B0;
+    --error-color: #E53E3E;
+    --success-color: #4CAF50;
+    --warning-color: #FFC107;
+    --background-color: #F7FAFC;
+    --card-color: #FFFFFF;
+    --text-primary: #212121;
+    --text-secondary: #757575;
+    --text-disabled: #BDBDBD;
+    --border-color: #E0E0E0;
+    --border-radius: 16px;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 10px;
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-container {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    opacity: 0.1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.section-title i {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.intro-text {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    font-size: 15px;
+}
+
+.input-icon-wrapper {
+    position: relative;
+}
+
+.input-icon-wrapper i {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 14px 16px 14px 45px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    color: var(--text-primary);
+    background-color: #FAFAFA;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 135, 255, 0.2);
+}
+
+input::placeholder, select::placeholder, textarea::placeholder {
+    color: var(--text-disabled);
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.textarea-wrapper i {
+    top: 18px;
+    transform: none;
+}
+
+/* Checkbox Styles */
+.checkbox-group {
+    margin-top: 25px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #FAFAFA;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #F0F0F0;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-top: 2px;
+}
+
+/* Button Styles */
+.form-action {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 28px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-submit i {
+    margin-right: 8px;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Info Section Styles */
+.info-section {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.info-section .icon-container {
+    background-color: var(--warning-color);
+    opacity: 0.1;
+}
+
+.info-section .section-title i {
+    color: var(--warning-color);
+}
+
+.info-section ul {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.info-section li {
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .card, .info-section {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    h3 {
+        font-size: 18px;
+    }
+    
+    .logo {
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card, .info-section {
+        padding: 15px;
+    }
+    
+    input, select, textarea {
+        padding: 12px 12px 12px 40px;
+        font-size: 14px;
+    }
+    
+    .btn-submit {
+        width: 100%;
+    }
+} 

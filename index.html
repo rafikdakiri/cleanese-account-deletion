@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleanese - Suppression de Compte</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="logo.png" alt="Cleanese Logo" class="logo">
+                <h1>Cleanese</h1>
+            </div>
+            <h2>Demande de Suppression de Compte</h2>
+        </header>
+
+        <div class="card">
+            <div class="section-title">
+                <div class="icon-container">
+                    <i class="fas fa-user-slash"></i>
+                </div>
+                <h3>Formulaire de Suppression</h3>
+            </div>
+
+            <p class="intro-text">
+                Conformément aux réglementations sur la protection des données, vous avez le droit de demander la suppression de votre compte et de vos données personnelles. Veuillez remplir ce formulaire pour initier votre demande de suppression.
+            </p>
+
+            <form id="deletion-form" action="https://formsubmit.co/cleanese@outlook.fr" method="POST">
+                <input type="hidden" name="_subject" value="Demande de Suppression de Compte Cleanese">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="thanks.html">
+
+                <div class="form-group">
+                    <label for="email">Adresse Email*</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="Votre adresse email associée au compte" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Numéro de Téléphone*</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone associé au compte" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="user_type">Type d'Utilisateur*</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-user-tag"></i>
+                        <select id="user_type" name="user_type" required>
+                            <option value="" disabled selected>Sélectionnez votre type de compte</option>
+                            <option value="client">Client</option>
+                            <option value="provider">Prestataire</option>
+                            <option value="enterprise">Entreprise</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">Raison de la Suppression</label>
+                    <div class="input-icon-wrapper textarea-wrapper">
+                        <i class="fas fa-comment-alt"></i>
+                        <textarea id="reason" name="reason" placeholder="Veuillez nous indiquer la raison de votre demande de suppression (facultatif)"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="confirmation" name="confirmation" required>
+                        <span class="checkmark"></span>
+                        <span class="checkbox-text">Je comprends que cette action est irréversible et que toutes mes données seront définitivement supprimées*</span>
+                    </label>
+                </div>
+
+                <div class="form-action">
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Envoyer ma Demande
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="info-section">
+            <div class="section-title">
+                <div class="icon-container">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <h3>Informations Importantes</h3>
+            </div>
+            <ul>
+                <li>Votre demande sera traitée dans un délai de 30 jours.</li>
+                <li>Nous vous enverrons une confirmation par email une fois que la suppression sera effectuée.</li>
+                <li>La suppression de votre compte entraînera la perte de tous vos historiques de réservations et de services.</li>
+                <li>Certaines données peuvent être conservées pour des raisons légales ou de conformité.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 Cleanese. Tous droits réservés.</p>
+            <div class="footer-links">
+                <a href="https://cleaneseapp.com/privacy-policy" target="_blank">Politique de Confidentialité</a> | 
+                <a href="https://cleaneseapp.com/terms" target="_blank">Conditions d'Utilisation</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

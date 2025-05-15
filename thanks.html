@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande de Suppression Envoyée - Cleanese</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--success-color);
+            opacity: 0.1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .success-icon i {
+            color: var(--success-color);
+            font-size: 40px;
+        }
+        
+        .success-message {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .success-message h3 {
+            color: var(--success-color);
+            margin-bottom: 15px;
+        }
+        
+        .success-message p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .return-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .return-link a {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .return-link a:hover {
+            color: var(--primary-dark);
+        }
+        
+        .return-link i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="logo.png" alt="Cleanese Logo" class="logo">
+                <h1>Cleanese</h1>
+            </div>
+            <h2>Demande de Suppression de Compte</h2>
+        </header>
+
+        <div class="card">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            
+            <div class="success-message">
+                <h3>Demande Envoyée avec Succès</h3>
+                <p>
+                    Nous avons bien reçu votre demande de suppression de compte. Notre équipe va traiter votre demande dans les plus brefs délais.
+                </p>
+                <p style="margin-top: 15px;">
+                    Un email de confirmation vous sera envoyé à l'adresse fournie une fois que votre compte et vos données auront été supprimés.
+                </p>
+            </div>
+            
+            <div class="info-section" style="box-shadow: none; padding: 20px; margin-bottom: 0;">
+                <h4 style="font-size: 18px; margin-bottom: 10px; color: var(--text-primary);">Prochaines étapes :</h4>
+                <ol style="padding-left: 20px; color: var(--text-secondary);">
+                    <li>Vérification de votre identité pour protéger votre compte</li>
+                    <li>Traitement de votre demande (délai maximal de 30 jours)</li>
+                    <li>Suppression de vos données personnelles</li>
+                    <li>Envoi d'une confirmation par email</li>
+                </ol>
+            </div>
+            
+            <div class="return-link">
+                <a href="index.html">
+                    <i class="fas fa-arrow-left"></i> Retour à la page d'accueil
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 Cleanese. Tous droits réservés.</p>
+            <div class="footer-links">
+                <a href="https://cleaneseapp.com/privacy-policy" target="_blank">Politique de Confidentialité</a> | 
+                <a href="https://cleaneseapp.com/terms" target="_blank">Conditions d'Utilisation</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 
